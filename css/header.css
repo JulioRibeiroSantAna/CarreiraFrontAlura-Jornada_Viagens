@@ -22,3 +22,26 @@ header {
 nav {
   display: none;
 }
+
+nav.ativo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondary-color);
+  border-radius: 5px;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  margin: 0.6rem;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.menu-icon img {
+  width: 2rem;
+  height: auto;
+}

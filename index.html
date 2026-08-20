@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Jornada Viagens</title>
   </head>
   <body>
@@ -16,28 +17,29 @@
       </a>
 
       <div class="navigation-menu">
-        <img src="img/menu.png" alt="Menu" />
-        <nav>
-          <ul>
-            <li>
-              <a href="blog.html" title="Acessar Blog" target="_blank">Blog</a>
-            </li>
-            <li>
-              <a
-                href="pacotes.html"
-                title="Acessar Pacotes de Viagem"
-                target="_blank"
-                >Pacotes de Viagem</a
-              >
-            </li>
-            <li>
-              <a href="contato.html" title="Acessar Contato" target="_blank"
-                >Contato</a
-              >
-            </li>
-          </ul>
+        <button
+          class="menu-icon"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <img src="img/menu.png" alt="Menu" />
+        </button>
+        <nav id="menu-principal">
+          <a href="blog.html" title="Acessar Blog" target="_blank">Blog</a>
+
+          <a
+            href="pacotes.html"
+            title="Acessar Pacotes de Viagem"
+            target="_blank"
+            >Pacotes de Viagem</a
+          >
+
+          <a href="contato.html" title="Acessar Contato" target="_blank"
+            >Contato</a
+          >
         </nav>
       </div>
     </header>
+    <script src="js/menuBar.js"></script>
   </body>
 </html>
