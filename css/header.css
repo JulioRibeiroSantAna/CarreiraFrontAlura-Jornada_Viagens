@@ -15,27 +15,17 @@ header {
   width: 68px;
   height: 64px;
 }
+.img-mobile {
+  display: block;
+}
+
+.img-desktop {
+  display: none;
+}
 
 .navigation-menu {
   margin-top: 24px;
   display: contents;
-}
-
-nav {
-  display: none;
-}
-
-nav.ativo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  width: 100%;
-  margin-top: 24px;
-}
-
-nav.ativo a {
-  text-decoration: none;
-  color: var(--text-secondary-color);
 }
 
 .menu-icon {
@@ -49,4 +39,78 @@ nav.ativo a {
 .menu-icon img {
   width: 2rem;
   height: auto;
+}
+
+nav {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary-color);
+}
+
+nav a:hover {
+  color: var(--button-primary-color);
+}
+
+nav.ativo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 17.5px 48px;
+  }
+  .menu-icon {
+    display: none; /* Esconde o icone */
+  }
+  nav,
+  nav.ativo {
+    display: flex;
+    flex-direction: row;
+    width: auto; /* Remove o width: 100% do mobile para não quebrar linha */
+    margin-top: 0; /* Remove o espaçamento superior do mobile */
+    gap: 40px;
+  }
+  nav a,
+  nav.ativo a {
+    white-space: nowrap;
+    font-size: 24px;
+  }
+  nav a:hover,
+  nav.ativo a:hover {
+    color: var(--button-primary-color);
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 260px;
+    height: 64px;
+  }
+  header {
+    padding: 37px 120px;
+  }
+  .img-desktop {
+    display: block;
+  }
+  .img-mobile {
+    display: none;
+  }
+}
+
+/*Desktop Tela Grande*/
+@media screen and (min-width: 1920px) {
+  header {
+    padding: 37px 160px;
+  }
 }
