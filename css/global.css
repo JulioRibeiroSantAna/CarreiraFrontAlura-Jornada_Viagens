@@ -43,6 +43,13 @@ body {
   color: var(--text-primary-color);
 }
 
+.offers-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*Alinhamento vertical*/
+  gap: 24px;
+}
+
 .section-title h2 {
   font-size: 28px;
   font-weight: var(--title-weight);
@@ -75,10 +82,26 @@ body {
   .section-title h2 {
     font-size: 32px;
   }
+  .offers-cards {
+    display: grid; /*Cria grades de 2x2, 3x3, etc*/
+    grid-template-columns: 312px 312px; /*Passar a largura do card para o ajuste*/
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .button:hover {
     background-color: var(--button-primary-color);
+  }
+  .offers-cards {
+    display: grid; /*Cria grades de 2x2, 3x3, etc*/
+    grid-template-columns: 588px 588px; /*Passar a largura do card para o ajuste*/
+    justify-content: center;
+  }
+  .hero h2,
+  .offers {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
